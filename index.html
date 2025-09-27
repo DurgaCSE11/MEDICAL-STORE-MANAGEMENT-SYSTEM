@@ -9,18 +9,24 @@
 <body>
   <h1>Medical Store Management System</h1>
   <div class="container">
+
+    <!-- Add / Update Medicine -->
     <h2>Add / Update Medicine</h2>
     <input type="number" id="medId" placeholder="Medicine ID">
     <input type="text" id="medName" placeholder="Medicine Name">
     <input type="number" id="medQty" placeholder="Quantity">
     <input type="number" step="0.01" id="medPrice" placeholder="Price">
     <button onclick="addOrUpdateMedicine()">Add / Update</button>
+    <button class="clear-all" onclick="clearAllMedicines()">Clear All</button>
+    <p id="message"></p>
 
+    <!-- Search Medicine -->
     <h2>Search Medicine</h2>
     <input type="number" id="searchId" placeholder="Enter ID">
     <button onclick="searchMedicine()">Search</button>
     <p id="searchResult"></p>
 
+    <!-- Medicine List Table -->
     <h2>Medicine List</h2>
     <table>
       <thead>
@@ -33,7 +39,7 @@
         </tr>
       </thead>
       <tbody id="medicineTable">
-        <!-- Rows will be added dynamically -->
+        <!-- Dynamic Rows -->
       </tbody>
     </table>
   </div>
