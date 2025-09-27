@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medical Store Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Medical Store Management System</h1>
+  <div class="container">
+    <h2>Add / Update Medicine</h2>
+    <input type="number" id="medId" placeholder="Medicine ID">
+    <input type="text" id="medName" placeholder="Medicine Name">
+    <input type="number" id="medQty" placeholder="Quantity">
+    <input type="number" step="0.01" id="medPrice" placeholder="Price">
+    <button onclick="addOrUpdateMedicine()">Add / Update</button>
+
+    <h2>Search Medicine</h2>
+    <input type="number" id="searchId" placeholder="Enter ID">
+    <button onclick="searchMedicine()">Search</button>
+    <p id="searchResult"></p>
+
+    <h2>Medicine List</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="medicineTable">
+        <!-- Rows will be added dynamically -->
+      </tbody>
+    </table>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
